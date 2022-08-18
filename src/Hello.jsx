@@ -1,5 +1,9 @@
 import React from "react";
 
-const Hello = () => (<h1>Hello World</h1>);
+const Hello = () => (
+    <div className="countdown">
+        <strong>śniadanie</strong> - 07:00
+    </div>
+);
 
 export default Hello;
