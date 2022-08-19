@@ -1,5 +1,6 @@
 import React, { Component} from "react";
 
+import "./Grafik.css";
 import Countdown from "./Countdown";
 
 class Grafik extends Component {
@@ -8,16 +9,16 @@ class Grafik extends Component {
         this.state = {
             events: [
                 { id:0, name: "śniadanie", time: "07:00"},
-                { id:1, name: "obiad", time: "15:00"}
+                { id:1, name: "obiad", time: "15:00"},
+                { id:2, name: "kolacja", time: "19:00"}
             ]
-        }
+        };
     }
     render() {
         const events = this.state.events.map(el => {
-            return <Countdown name={el.name} time={el.time} />;
+            return <Countdown key={el.id}name={el.name} time={el.time} />;
         });
-        return 
-            <div>{events}</div>;
+        return <div className="grafik">{events}</div>;
         
     }
 }
