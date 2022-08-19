@@ -13,12 +13,12 @@ class Grafik extends Component {
         }
     }
     render() {
-        return (
-            <div>
-        <Countdown name="śniadanie" time="07:00"/>
-        <Countdown name="obiad" time="15:00"/>
-    </div>
-        );
+        const events = this.state.events.map(el => {
+            return <Countdown name={el.name} time={el.time} />;
+        });
+        return 
+            <div>{events}</div>;
+        
     }
 }
 
