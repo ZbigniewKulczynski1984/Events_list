@@ -1,0 +1,11 @@
+#root,
+.grafik {
+    height: 100%;
+}
+
+.grafik {
+    background: #3181f2;
+    max-width: 500px;
+    margin: 0 auto;
+}
+

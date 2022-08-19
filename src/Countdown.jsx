@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Countdown = (props) => (
+import "./Countdown.css";
+
+const Countdown = props => (
 
         <div className="countdown">
             <strong>{props.name}</strong> - {props.time}
@@ -11,10 +13,10 @@ const Countdown = (props) => (
         // </div>
 );
 
-Countdown.PropTypes = {
+Countdown.propTypes = {
     name: PropTypes.string,
-    time: Proptypes.string
-}
+    time: PropTypes.string
+};
 
 
 
