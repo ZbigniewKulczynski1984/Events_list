@@ -21,7 +21,7 @@ class Grafik extends Component {
         });
         return <div className="grafik">
             {events}
-            <EditEvent />
+            <EditEvent onSave={() => alert("A")}/>
             </div>;
         
     }
