@@ -2,6 +2,7 @@ import React, { Component} from "react";
 
 import "./Grafik.css";
 import Countdown from "./Countdown";
+import EditEvent from "./EditEvent";
 
 class Grafik extends Component {
     constructor() {
@@ -18,7 +19,10 @@ class Grafik extends Component {
         const events = this.state.events.map(el => {
             return <Countdown key={el.id}name={el.name} time={el.time} />;
         });
-        return <div className="grafik">{events}</div>;
+        return <div className="grafik">
+            {events}
+            <EditEvent />
+            </div>;
         
     }
 }
